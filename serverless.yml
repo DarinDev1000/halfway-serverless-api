@@ -10,7 +10,8 @@ custom:
     includeModules: true
   customDomain:
     domainName: halfway-api.darindev1000.com
-    basePath: ''
+    certificateName: 'darindev1000.com'
+    basePath: '${self:provider.stage}'
     stage: ${self:provider.stage}
     createRoute53Record: true
     endpointType: edge
