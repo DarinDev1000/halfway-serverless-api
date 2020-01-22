@@ -5,6 +5,7 @@
   "main": "handler.js",
   "scripts": {
     "start": "sls offline --port 3005",
+    "offline": "sls offline --port 3005",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "sls deploy",
     "pretty": "prettier --write '*.{ts,js,yml,json}' && prettier --write '**/*.{ts,js,yml,json}'"
