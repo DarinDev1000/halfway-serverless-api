@@ -8,7 +8,9 @@
     "offline": "sls offline --port 3005",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "sls deploy",
-    "pretty": "prettier --write '*.{ts,js,yml,json}' && prettier --write '**/*.{ts,js,yml,json}'"
+    "pretty": "prettier --write '*.{ts,js,yml,json}' && prettier --write '**/*.{ts,js,yml,json}'",
+    "pre-push": "echo Pre push git hook"
+
   },
   "dependencies": {
     "source-map-support": "^0.5.10"
@@ -36,7 +38,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm test"
+      "pre-push": "npm run pre-push"
     }
   }
 }
