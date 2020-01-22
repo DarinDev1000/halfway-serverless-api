@@ -8,6 +8,13 @@ custom:
   webpack:
     webpackConfig: ./webpack.config.js
     includeModules: true
+  customDomain:
+    domainName: halfway-api.darindev1000.com
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: true
+    endpointType: edge
+    enabled: true
 
 # Add the serverless-webpack plugin
 plugins:
@@ -18,7 +25,7 @@ provider:
   name: aws
   runtime: nodejs12.x
   profile: darindev1000
-  region: us-west-2
+  region: us-east-1
   stage: dev
   apiGateway:
     minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
