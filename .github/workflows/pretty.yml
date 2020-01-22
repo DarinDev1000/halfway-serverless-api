@@ -24,5 +24,10 @@ jobs:
       # commit any changed files
       - name: Commit and push pretty formating
         run: |
-          git commit -am "Github Action: Format files with pretty"
-          git remote set-url --push origin https://darindev1000:$GITHUB_TOKEN@github.com/halfway-serverless-api
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Github Action: Format files with pretty" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
