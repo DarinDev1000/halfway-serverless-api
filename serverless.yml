@@ -16,6 +16,9 @@ plugins:
 provider:
   name: aws
   runtime: nodejs12.x
+  profile: darindev1000
+  region: us-east-1
+  stage: dev
   apiGateway:
     minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
   environment:
