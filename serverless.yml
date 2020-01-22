@@ -9,8 +9,8 @@ custom:
     webpackConfig: ./webpack.config.js
     includeModules: true
   customDomain:
-    domainName: halfway-api.darindev1000.com
-    certificateName: 'darindev1000.com'
+    domainName: v1.halfway.api.darindev1000.com
+    certificateName: 'v1.halfway.api.darindev1000.com'
     basePath: '${self:provider.stage}'
     stage: ${self:provider.stage}
     createRoute53Record: true
