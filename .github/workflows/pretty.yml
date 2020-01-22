@@ -1,6 +1,9 @@
 name: Prettier
 on: [push]
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   build:
     name: Prettier
@@ -21,7 +24,5 @@ jobs:
       # commit any changed files
       - name: Commit and push pretty formating
         run: |
-          git config --global user.name 'Darin Github Action'
-          git config --global user.email 'darindev1000@users.noreply.github.com'
           git commit -am "Github Action: Format files with pretty"
-          git push origin HEAD:master
+          git remote set-url --push origin https://darindev1000:$GITHUB_TOKEN@github.com/halfway-serverless-api
