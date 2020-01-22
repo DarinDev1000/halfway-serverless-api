@@ -9,14 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - run: |
-        echo 'before install'
+    - name: before install
+      run: echo before install
     - name: npm install
       uses: actions/npm@master
       with:
         args: install
-    - run: |
-        echo 'finished install'
+    - name: before install
+      run: echo finished install
     - name: serverless deploy
       uses: serverless/github-action@master
       with:
