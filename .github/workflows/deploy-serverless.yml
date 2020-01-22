@@ -11,10 +11,7 @@ jobs:
     - uses: workflows/checkout@master
     - name: before install
       run: echo before install
-    - name: npm install
-      uses: actions/npm@master
-      with:
-        args: install
+    - run: npm ci
     - name: before install
       run: echo finished install
     - name: serverless deploy
