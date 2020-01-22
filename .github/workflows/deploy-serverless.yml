@@ -9,11 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: before install
-      run: echo before install
     - run: npm ci
-    - name: before install
-      run: echo finished install
     - name: serverless deploy
       uses: serverless/github-action@master
       with:
