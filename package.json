@@ -8,6 +8,7 @@
     "offline": "sls offline --port 3005",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "sls deploy",
+    "pretty-github-action": "prettier --write '*.{ts,js,yml,json}' && prettier --write '**/*.{ts,js,json}'",
     "pretty": "prettier --write '*.{ts,js,yml,json}' && prettier --write '**/*.{ts,js,yml,json}'",
     "pre-push": "echo Pre push git hook"
 

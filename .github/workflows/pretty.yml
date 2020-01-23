@@ -19,7 +19,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - run: npm ci
-      - run: npm run pretty
+      - run: npm run pretty-github-action
       - run: git status
       # commit any changed files
       - name: Commit and push pretty formating
