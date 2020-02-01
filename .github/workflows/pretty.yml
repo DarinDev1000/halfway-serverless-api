@@ -26,8 +26,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m "Github Action: Format files with pretty" -a || echo "nothing to commit, working tree clean"
-          git push
+          (git commit -m "Github Action: Format files with pretty" -a && git push) || echo "Skipping commit and push, nothing changed"
       # - name: Push changes
       #   uses: ad-m/github-push-action@master
       #   with:
