@@ -1,8 +1,9 @@
 service:
   name: halfway-serverless-api
 # app and org for use with dashboard.serverless.com
-app: halfway-serverless-api
-org: darindev1000
+# This serverless app link might be breaking github deploy action
+# app: halfway-serverless-api
+# org: darindev1000
 
 custom:
   webpack:
