@@ -14,6 +14,9 @@ jobs:
       - uses: actions/checkout@master
       - run: npm ci
       - run: npm run deploy
+        
+#       This might work now, Issue was link to serverless website app in yml
+
 #       - name: serverless deploy
 #         uses: serverless/github-action@master
 #         with:
